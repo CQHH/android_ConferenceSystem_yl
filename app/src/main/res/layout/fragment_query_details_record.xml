@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/w_re_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会议纪要内容："
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="#222222" />
+
+       <ScrollView
+           android:id="@+id/scro"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/title"
+           android:layout_above="@+id/ed_btn">
+
+           <EditText
+               android:id="@+id/textcon"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:padding="12dp"
+               android:textSize="16sp"
+               android:textColor="#222222"
+               android:background="@null"/>
+
+       </ScrollView>
+        
+        <TextView
+            android:id="@+id/ed_btn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:text="编辑"
+            android:textSize="16sp"
+            android:textColor="#4B97FF"
+            android:background="@drawable/shape_archives_ed"
+            android:gravity="center"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/w_re_on"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="1dp"
+        android:background="#ffffff"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/title_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新增或编辑会议纪要："
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="#222222" />
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="请输入会议纪要或录音会议纪要"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:textColor="#222222"
+            android:layout_toLeftOf="@+id/hr"
+            android:gravity="top"
+            android:layout_below="@+id/title_two"/>
+
+        <View
+            android:id="@+id/hr"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/re"
+            android:background="#F0F2F5"></View>
+
+        <RelativeLayout
+            android:id="@+id/re"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerVertical="true"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/start_and_end"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="开始转写"
+                    android:textSize="14sp"
+                    android:textColor="#1890FF"
+                    android:gravity="center"
+                    android:background="@drawable/shape_record_btn"
+                    android:padding="6dp"/>
+
+                <!--<TextView
+                    android:id="@+id/again"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="重新开始"
+                    android:textSize="14sp"
+                    android:textColor="#1890FF"
+                    android:gravity="center"
+                    android:background="@drawable/shape_record_btn"
+                    android:padding="6dp"
+                    android:layout_marginTop="40dp"/>-->
+
+                <TextView
+                    android:id="@+id/save"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="保存纪要"
+                    android:textSize="14sp"
+                    android:textColor="#1890FF"
+                    android:gravity="center"
+                    android:background="@drawable/shape_record_btn"
+                    android:layout_marginTop="40dp"
+                    android:padding="6dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

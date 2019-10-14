@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <com.em.baseframe.view.viewpager.CustomViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/left_but"
+        android:layout_below="@+id/hr">
+    </com.em.baseframe.view.viewpager.CustomViewPager>
+
+    <RelativeLayout
+        android:id="@+id/logo_re"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:background="#4B97FF">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_re"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/logo_re"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无纸化会议系统"
+            android:textColor="#626262"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingRight="12dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:actualImageScaleType="centerCrop"
+                app:failureImage="@drawable/user_img"
+                app:failureImageScaleType="centerCrop"
+                app:placeholderImage="@drawable/user_img"
+                app:placeholderImageScaleType="centerCrop"
+                app:roundAsCircle="true"
+                app:roundedCornerRadius="15dp">
+            </com.facebook.drawee.view.SimpleDraweeView>
+
+            <TextView
+                android:id="@+id/user_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:textColor="#222222"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#222222"
+                android:textSize="14sp"
+                android:layout_marginLeft="12dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:background="#4B97FF"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:text="退出系统"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E8E8E8"
+        android:layout_below="@+id/title_re"></View>
+    
+    <LinearLayout
+        android:id="@+id/left_but"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/logo_re"
+        android:background="#071D3F">
+
+        <RelativeLayout
+            android:id="@+id/home_re"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="#0A2953"
+            android:layout_marginTop="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/home_view"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="#0099FF"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"></View>
+
+                    <ImageView
+                        android:id="@+id/home_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_h"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="35dp"/>
+
+                    <TextView
+                        android:id="@+id/home_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/home_img"
+                        android:layout_marginLeft="12dp"
+                        android:text="系统首页"
+                        android:textColor="#9FA7AE"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/sponsor_conference_re"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="#071D3F">>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/sponsor_conference_view"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="#0099FF"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"></View>
+
+                    <ImageView
+                        android:id="@+id/sponsor_conference_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sponsor_h"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="35dp"/>
+
+                    <TextView
+                        android:id="@+id/sponsor_conference_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/sponsor_conference_img"
+                        android:layout_marginLeft="12dp"
+                        android:text="发起会议"
+                        android:textColor="#9FA7AE"
+                        android:textSize="14sp" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/query_conference_re"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="#071D3F">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/query_conference_view"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="#0099FF"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"></View>
+
+                    <ImageView
+                        android:id="@+id/query_conference_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/query_h"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="35dp"/>
+
+                    <TextView
+                        android:id="@+id/query_conference_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/query_conference_img"
+                        android:layout_marginLeft="12dp"
+                        android:text="所有会议"
+                        android:textColor="#9FA7AE"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_conference_re"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="#071D3F">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/my_conference_view"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="#0099FF"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"></View>
+
+                    <ImageView
+                        android:id="@+id/my_conference_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/my_h"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="35dp"/>
+
+                    <TextView
+                        android:id="@+id/my_conference_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/my_conference_img"
+                        android:layout_marginLeft="12dp"
+                        android:text="我的会议"
+                        android:textColor="#9FA7AE"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/archives_re"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="#071D3F">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/archives_view"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="#0099FF"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"></View>
+
+                    <ImageView
+                        android:id="@+id/archives_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/all_h"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="35dp"/>
+
+                    <TextView
+                        android:id="@+id/archives_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/archives_img"
+                        android:layout_marginLeft="12dp"
+                        android:text="会议档案"
+                        android:textColor="#9FA7AE"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/up_re"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="#071D3F">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/up_view"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="#0099FF"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"></View>
+
+                    <ImageView
+                        android:id="@+id/up_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mng_h"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="35dp"/>
+
+                    <TextView
+                        android:id="@+id/up_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/up_img"
+                        android:layout_marginLeft="12dp"
+                        android:text="管理操作"
+                        android:textColor="#9FA7AE"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/personal_center_re"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:background="#071D3F">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:id="@+id/personal_center_view"
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:background="#0099FF"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"></View>
+
+                    <ImageView
+                        android:id="@+id/personal_center_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/personal_h"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="35dp"/>
+
+                    <TextView
+                        android:id="@+id/personal_center_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/personal_center_img"
+                        android:layout_marginLeft="12dp"
+                        android:text="个人中心"
+                        android:textColor="#9FA7AE"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

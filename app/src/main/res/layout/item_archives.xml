@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="XX去第二次常务会议"
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"
+            android:maxLines="1"
+            android:maxEms="10"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="2017-5-3：10：00"
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"/>
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="区委会议办公大楼三楼会议室"
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"
+            android:maxLines="1"
+            android:maxEms="10"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/host"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="系统管理员"
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"
+            android:maxLines="1"
+            android:maxEms="10"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="删除"
+                android:textSize="14sp"
+                android:textColor="#F5222D"
+                android:background="@drawable/shape_archives_delete_btn"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

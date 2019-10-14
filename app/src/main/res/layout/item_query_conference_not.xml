@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="225dp"
+    android:background="#ffffff"
+    android:paddingTop="12dp"
+    android:layout_marginRight="0.5dp">
+
+    <RelativeLayout
+        android:id="@+id/top_re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/meeting"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="会议标题"
+            android:layout_toRightOf="@+id/img"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:maxEms="20"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/top_re">
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始时间：2019年02月20日 13:00"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_marginLeft="12dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:layout_below="@+id/re"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:layout_marginTop="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/down_lin"
+        android:layout_below="@+id/host">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="会议简介："
+            android:textSize="16sp"
+            android:textColor="#8F8F8F"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_below="@+id/img"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="那是一种内在的东西，他们到达不了，也无法触及的。"
+            android:textSize="16sp"
+            android:textColor="#8F8F8F"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/down_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/text_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="应到人：50"
+            android:textSize="16sp"
+            android:textColor="#8F8F8F"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"/>
+
+        <TextView
+            android:id="@+id/text_q"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="签到：50"
+            android:textSize="16sp"
+            android:textColor="#8F8F8F"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/text_j"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="请假：50"
+            android:textSize="16sp"
+            android:textColor="#8F8F8F"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:gravity="right"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

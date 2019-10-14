@@ -1,0 +1,1 @@
+include ':app', ':baseFrame', ':baseBanner', ':baseRefresh', ':lib-bither-compress', ':baseTakephoto'

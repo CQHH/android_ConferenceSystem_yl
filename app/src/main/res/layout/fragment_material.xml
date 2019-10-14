@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5">
+
+    <com.em.refresh.PtrFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F2F5"
+        android:layout_above="@+id/hr"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyvlerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </com.em.refresh.PtrFrameLayout>
+
+    <View
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#F0F2F5"
+        android:layout_above="@+id/down_re">
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/down_re"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_roun_btn"
+            android:text="上一步"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:drawablePadding="4dp"/>
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_roun_btn"
+            android:text="下一步"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:drawablePadding="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_roun_btn"
+            android:text="继续添加"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_toLeftOf="@+id/next"
+            android:layout_marginRight="12dp"
+            android:drawableLeft="@drawable/add"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:drawablePadding="4dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

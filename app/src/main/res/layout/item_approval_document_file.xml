@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_material"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:actualImageScaleType="centerCrop"
+        app:failureImage="@drawable/img_img"
+        app:failureImageScaleType="centerCrop"
+        app:placeholderImage="@drawable/img_img"
+        app:placeholderImageScaleType="centerCrop"
+        app:roundedCornerRadius="5dp"
+        app:roundTopLeft="true"
+        app:roundBottomLeft="false"
+        app:roundTopRight="true"
+        app:roundBottomRight="false">
+    </com.facebook.drawee.view.SimpleDraweeView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关于下发XX文件决议"
+        android:textSize="16sp"
+        android:textColor="#27273F"
+        android:layout_below="@+id/img"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"/>
+
+</RelativeLayout>

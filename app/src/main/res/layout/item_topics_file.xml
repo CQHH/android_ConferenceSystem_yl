@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_material"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp">
+
+    <RelativeLayout
+        android:id="@+id/re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_fresco"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:actualImageScaleType="centerCrop"
+            app:failureImage="@drawable/fia"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/fia"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundedCornerRadius="5dp"
+            app:roundTopLeft="true"
+            app:roundBottomLeft="false"
+            app:roundTopRight="true"
+            app:roundBottomRight="false">
+        </com.facebook.drawee.view.SimpleDraweeView>
+
+        <RelativeLayout
+            android:id="@+id/img_re"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/word"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#30999999"
+        android:layout_below="@+id/re"></View>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关于XX通知的任免决议"
+        android:textSize="16sp"
+        android:textColor="#27273F"
+        android:layout_below="@+id/hr"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="2"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#8F8F8F"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="70dp"
+        android:layout_height="24dp"
+        android:text="删除"
+        android:textSize="14sp"
+        android:textColor="#F5222D"
+        android:gravity="center"
+        android:background="@drawable/shape_manager_delete_btn"
+        android:layout_below="@+id/date"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:id="@+id/identification"
+        android:layout_width="70dp"
+        android:layout_height="24dp"
+        android:text="已阅"
+        android:textSize="14sp"
+        android:textColor="#4B97FF"
+        android:gravity="center"
+        android:background="@drawable/shape_manager_identification_btn"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/date"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

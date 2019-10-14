@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="5dip">
+
+    <Button
+        android:id="@+id/btn_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame_bottom_dialog_last_selector"
+        android:onClick="btnClick"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="男"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DAD9DB"/>
+
+    <Button
+        android:id="@+id/btn_last"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frame_bottom_dialog_first_selector"
+        android:onClick="btnClick"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="女"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btn_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/forme_bottom_dialog_cancel_selector"
+        android:onClick="btnClick"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:text="取消"
+        android:textSize="16sp"/>
+
+</LinearLayout>

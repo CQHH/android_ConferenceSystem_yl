@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/w_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前位置："
+            android:textColor="#8F8F8F"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/w_text"
+            android:text="首页 / 个人中心"
+            android:textColor="#8F8F8F"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_person_center_roun"
+        android:layout_margin="12dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:actualImageScaleType="centerCrop"
+            app:failureImage="@drawable/user_img"
+            app:failureImageScaleType="centerCrop"
+            app:placeholderImage="@drawable/user_img"
+            app:placeholderImageScaleType="centerCrop"
+            app:roundAsCircle="true"
+            app:roundedCornerRadius="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp">
+        </com.facebook.drawee.view.SimpleDraweeView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#222222"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img"
+            android:layout_marginTop="18dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="18dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/department"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="18dp"
+            android:padding="6dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"/>
+
+        <LinearLayout
+            android:id="@+id/lin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/department"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/jurisdiction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统权限："
+                android:textSize="14sp"
+                android:textColor="#5F5F5F"/>
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="性别：男"
+                android:textSize="14sp"
+                android:textColor="#5F5F5F"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年龄：30"
+                android:textSize="14sp"
+                android:textColor="#5F5F5F"
+                android:layout_marginLeft="20dp"/>-->
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/hr"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/lin"
+            android:layout_marginTop="26dp"
+            android:background="#D9D9D9"
+            android:layout_marginLeft="260dp"
+            android:layout_marginRight="260dp"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="260dp"
+            android:layout_marginRight="260dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp">
+
+            <TextView
+                android:id="@+id/up_pwd"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="修改密码"
+                android:textSize="16sp"
+                android:textColor="#13C2C2"
+                android:background="@drawable/shape_person_pwd"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/up_d1"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="建设中"
+                android:textSize="16sp"
+                android:textColor="#F47F92"
+                android:background="@drawable/shape_person_d1"
+                android:layout_alignParentRight="true"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/up_d"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="建设中"
+                android:textSize="16sp"
+                android:textColor="#4B97FF"
+                android:layout_below="@+id/up_d1"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_person_phone"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/up_d2"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:text="建设中"
+                android:textSize="16sp"
+                android:textColor="#A97BE9"
+                android:layout_below="@+id/up_d1"
+                android:background="@drawable/shape_person_d2"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

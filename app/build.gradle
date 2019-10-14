@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.cq.hh.wzhhy"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi'
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath = true
+            }
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    testImplementation 'junit:junit:4.12'
+    implementation project(path: ':baseFrame')
+    implementation project(path: ':baseBanner')
+    implementation project(path: ':lib-bither-compress')
+    implementation project(path: ':baseTakephoto')
+    //注解
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //事件总线
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //数据库
+    implementation 'org.litepal.android:java:3.0.0'
+    //MMKV 腾讯替代SP
+    implementation 'com.tencent:mmkv:1.0.17'
+    //时间选择弹出框
+    implementation 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+    //相片裁剪
+    implementation 'com.github.yalantis:ucrop:2.2.1'
+    //权限
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.2.0'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.2.0'
+    //选择文件
+    implementation 'com.leon:lfilepickerlibrary:1.8.0'
+    //预览PDF
+    implementation 'es.voghdev.pdfviewpager:library:1.0.3'
+    //fresco大图浏览缩放，左右滑动需要的额外依赖
+    implementation 'com.facebook.fresco:animated-gif:1.0.0'
+    implementation 'com.facebook.fresco:animated-webp:1.0.0'
+    implementation 'com.facebook.fresco:webpsupport:1.0.0'
+    implementation files('libs/api-gw-sdk-android-1.0.8.jar')
+    //视频播放
+    implementation 'com.github.xiaoyanger0825:NiceVieoPlayer:v2.2'
+}

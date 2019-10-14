@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/xh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"/>
+
+        <TextView
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#272727"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:text="张三"
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:text="局长"
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"/>
+
+        <TextView
+            android:id="@+id/title_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center"
+            android:text="公安局"
+            android:textSize="14sp"
+            android:textColor="#5F5F5F"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="50dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_manager_delete_btn"
+                android:text="删除"
+                android:textColor="#F5222D"
+                android:textSize="14sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/updata"
+                android:layout_width="50dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_manager_updata_btn"
+                android:layout_toLeftOf="@+id/delete"
+                android:text="修改"
+                android:textColor="#4B97FF"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginRight="12dp"/>
+
+            <TextView
+                android:id="@+id/uppwd"
+                android:layout_width="70dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_manager_updata_btn"
+                android:layout_toLeftOf="@+id/updata"
+                android:text="重置密码"
+                android:textColor="#4B97FF"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginRight="12dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
